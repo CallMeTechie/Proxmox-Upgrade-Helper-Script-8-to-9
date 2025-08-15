@@ -13,7 +13,7 @@ Das Script `pve8to9_upgrade.sh` automatisiert das In-Place-Upgrade von Proxmox V
 ### Automatisierte Upgrade-Schritte
 - **Repository-Konfiguration:** Wechsel zwischen no-subscription und enterprise Kanälen
 - **Quellenbereinigung:** Zuverlässige Entfernung/Deaktivierung widersprüchlicher PVE-Quellen
-- **Moderne APT-Konfiguration:** Verwendung von deb822-Quellenformat für Debian 13 + PVE 9
+- **APT-Konfiguration:** Verwendung von deb822-Quellenformat für Debian 13 + PVE 9
 - **Vollständiges Dist-Upgrade:** Mit optionalem automatischem Neustart
 
 ## Kommandozeilen-Optionen
@@ -47,7 +47,7 @@ Das Script `pve8to9_upgrade.sh` automatisiert das In-Place-Upgrade von Proxmox V
 ## Technische Details
 
 ### Repository-Konfiguration
-Das Script verwendet das moderne **deb822-Format** für APT-Quellen:
+Das Script verwendet das **deb822-Format** für APT-Quellen:
 
 **Debian 13 "Trixie" Quellen:**
 - Main Repository: `http://deb.debian.org/debian`
