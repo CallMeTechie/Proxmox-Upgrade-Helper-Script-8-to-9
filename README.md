@@ -6,7 +6,7 @@ Das Script `pve8to9_upgrade.sh` automatisiert das In-Place-Upgrade von Proxmox V
 
 **Autor:** Techie  
 **Website:** https://callmetechie.de  
-**Version:** 1.1 (2025-08-14)
+**Version:** 1.4 (2026-05-06)
 
 ## Hauptfunktionen
 
@@ -142,6 +142,13 @@ sudo ./pve8to9_upgrade.sh --allow-ceph
 - **Log-Datei:** `/var/log/pve8to9-upgrade-YYYY-MM-DD-HHMMSS.log`
 - **Real-time Output:** Parallele Ausgabe auf Terminal und Log
 - **Timestamp-basiert:** Eindeutige Log-Dateien pro Ausführung
+
+## Nach dem Upgrade
+
+- **Reboot:** Zwingend nach erfolgreichem Upgrade durchführen
+- **Browser-Cache leeren:** Web-UI mit `Ctrl+Shift+R` (Linux/Win) bzw. `Cmd+Alt+R` (macOS) neu laden, damit alte Assets nicht weiter verwendet werden
+- **HA prüfen** (Cluster): `journalctl -eu pve-ha-crm` nach Reboot kontrollieren
+- **Cluster-Reihenfolge:** Erst nach Verifikation eines Knotens den nächsten upgraden
 
 ## Kompatibilität
 
