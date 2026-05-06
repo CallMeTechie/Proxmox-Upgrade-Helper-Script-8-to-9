@@ -11,7 +11,7 @@ jobs:
     name: Shellcheck + Syntax
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: bash -n (Syntax-Check)
         run: bash -n pve8to9_upgrade.sh
@@ -26,7 +26,7 @@ jobs:
     name: Help & Argument-Parser
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: --help liefert exit 0 und enthaelt Usage
         run: |
@@ -46,7 +46,7 @@ jobs:
     name: bats tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install bats
         run: sudo apt-get update && sudo apt-get install -y bats
