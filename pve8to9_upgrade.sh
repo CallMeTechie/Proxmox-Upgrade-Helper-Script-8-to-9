@@ -80,7 +80,7 @@ if [[ $ASSUME_YES -eq 1 ]]; then
 fi
 
 # ----------------------- Helpers -----------------------
-bkdir() { local d="/root/pve8to9-backup-$(date +%F-%H%M%S)"; mkdir -p "$d"; echo "$d"; }
+bkdir() { local d; d="/root/pve8to9-backup-$(date +%F-%H%M%S)"; mkdir -p "$d"; echo "$d"; }
 confirm() { [[ $ASSUME_YES -eq 1 ]] && return 0; read -r -p "$1 [yes/NO]: " a; [[ "${a,,}" == "yes" ]]; }
 file_disable() { # rename or comment-out
   local f="$1"
